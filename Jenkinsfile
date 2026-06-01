@@ -8,12 +8,12 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                sh "docker build -t cicd-app ."
+                bat "docker build -t cicd-app ."
             }
         }
         stage ('Run Container') {
             steps {
-                sh "docker run --rm cicd-app"
+                bat "docker run --rm cicd-app"
             }
         }
     }
